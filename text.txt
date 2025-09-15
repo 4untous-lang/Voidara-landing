@@ -1,0 +1,287 @@
+Abel o000
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Voidara AI - Simplify Life & Business</title>
+<style>
+  /* ====== Variables for easy customization ====== */
+  :root {
+    --color-gradient-start: #6a4fbf; /* Purple */
+    --color-gradient-mid1: #3a9ad9; /* Blue */
+    --color-gradient-mid2: #3ac8b7; /* Teal */
+    --color-gradient-end: #ffffff; /* White */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --button-bg: #3ac8b7;
+    --button-hover-bg: #2a9a8f;
+    --button-color: white;
+    --button-hover-color: #d4f1f4;
+    --text-color: #222222;
+    --footer-bg: rgba(0,0,0,0.05);
+  }
+
+  /* ====== Reset & Base ====== */
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    min-height: 100vh;
+    background: linear-gradient(
+      135deg,
+      var(--color-gradient-start),
+      var(--color-gradient-mid1),
+      var(--color-gradient-mid2),
+      var(--color-gradient-end)
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  /* ====== Navigation Bar ====== */
+  nav {
+    background: rgba(255 255 255 / 0.15);
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+  nav .nav-home {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  nav .nav-home:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  /* ====== Main Container ====== */
+  main {
+    max-width: 900px;
+    margin: 3rem auto 5rem auto;
+    padding: 0 1rem;
+    background: rgba(255 255 255 / 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  }
+  main h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+    color: #3a3a3a;
+  }
+  main p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #555555;
+  }
+
+  /* ====== Video Container - responsive ====== */
+  .videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  iframe {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    position: relative;
+  }
+  iframe[src] {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+  }
+  .video-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+  /* Mobile: single column */
+  @media (max-width: 700px) {
+    .videos {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ====== Buttons ====== */
+  .buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .btn {
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    padding: 1rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.25s ease;
+    box-shadow: 0 5px 12px rgb(58 200 183 / 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn:hover,
+  .btn:focus {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-color);
+    box-shadow: 0 8px 20px rgb(42 154 143 / 0.9);
+    outline: none;
+    transform: scale(1.05);
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  /* ====== Footer ====== */
+  footer {
+    background: var(--footer-bg);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 1rem;
+    color: #444444;
+    font-weight: 600;
+    border-top: 1px solid #ddd;
+    user-select: none;
+  }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-home" aria-label="Home">Home</a>
+</nav>
+
+<main>
+  <h1>Welcome to Voidara AI</h1>
+  <p>Voidara AI simplifies your life by automating everyday tasks and opens exciting new business opportunities. Discover the power of intelligent automation designed to enhance personal and professional productivity.</p>
+
+  <div class="videos">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/LDDkg0FLIr0"
+        title="Voidara AI Introduction"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/LDDkg0FLIr0"
+        title="Voidara AI Demo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <a
+      href="https://voidara.ai/customer?ref=abe-gao"
+      class="btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Access Your Free Agent"
+      >Access Your Free Agent</a
+    >
+    <a
+      href="https://partner.voidara.ai/register?ref=abe-gao"
+      class="btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Join as a Partner"
+      >Join as a Partner</a
+    >
+  </div>
+</main>
+
+<footer>
+  Contact us: <a href="tel:+27650952916" style="color: inherit; text-decoration: none;">+27 650 952 916</a>
+</footer>
+
+<!-- 
+================= BEGINNING BEGINNER-FRIENDLY SETUP INSTRUCTIONS =================
+
+1) Create a GitHub Account:
+   - Go to https://github.com/
+   - Click "Sign up" and follow the instructions with your email, username, and password.
+
+2) Create a New Repository:
+   - After logging in, click the "+" icon (top right) and choose "New repository".
+   - Enter a repository name, for example "voidara-landing".
+   - Choose "Public".
+   - DO NOT initialize README, .gitignore, or license (keep it empty).
+   - Click "Create repository".
+
+3) Upload the Landing Page Code:
+   - In your new repository, click "Add file" → "Upload files".
+   - Drag and drop this code saved as "index.html" (copy all the code from this file and save it on your computer in a text editor with .html extension).
+   - Scroll down and click "Commit changes".
+
+4) Enable GitHub Pages Hosting:
+   - In the repository, go to "Settings".
+   - Scroll down to "Pages" section (usually under “Code and automation”).
+   - For "Source", select the branch "main" (or "master" if that's what you have).
+   - Select Root ("/") folder.
+   - Click "Save".
+   - You will see a green link showing your website URL like https://yourusername.github.io/voidara-landing/
+
+5) Access Your Published Landing Page:
+   - Click the link provided by GitHub Pages.
+   - Your Voidara landing page will be live and accessible publicly.
+
+================= HOW TO CUSTOMIZE =================
+
+- Change Background Gradient Colors:
+  Modify the CSS variables at the top inside the <style> tag:
+    --color-gradient-start, --color-gradient-mid1, --color-gradient-mid2, --color-gradient-end
+
+- Update Links on Buttons:
+  Change the href values in the two <a> tags with class "btn" inside the <div class="buttons">:
+    Access Your Free Agent → href="YOUR_LINK_HERE"
+    Join as a Partner → href="YOUR_LINK_HERE"
+
+- Swap YouTube Videos:
+  Modify the src attribute of both <iframe> tags inside .video-wrapper divs:
+    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+
+- Modify Contact Info:
+  Edit the phone number in the <footer> tag’s anchor href and text:
+    href="tel:+27650952916"
+    and phone number text between <a> and </a>
+
+Feel free to personalize colors, fonts, text, and images to reflect your brand and message perfectly.
+
+-->
+
+</body>
+</html>
+```
